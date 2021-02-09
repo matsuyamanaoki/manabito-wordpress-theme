@@ -8,7 +8,7 @@
 <body>
 	<header>
 		<div class="header-logo">
-			<a href="index.html">
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>">
 				<?php
 				if ( has_custom_logo() ) {
 					$custom_logo_id = get_theme_mod( 'custom_logo' );
@@ -20,11 +20,13 @@
 			</a>
 		</div>
 		<nav class="nav-global">
-			<ul>
-				<li><a href="about.html">動物園について</a></li>
-				<li><a href="guide.html">ガイドのご案内</a></li>
-				<li><a href="animals.html">人気の動物たち</a></li>
-				<li><a href="contact.html">お問い合わせ</a></li>
-			</ul>
+			<?php
+			$args = array(
+				'container'      => '',
+				'theme_location' => 'global',
+				'items_wrap'     => '<ul>%3$s</ul>'
+			);
+			wp_nav_menu( $args );
+			?>
 		</nav>
 	</header>
