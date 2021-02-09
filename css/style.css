@@ -218,6 +218,17 @@ footer address {
   width: 100%;
 }
 
+footer address a {
+	color: #fff;
+}
+
+@media screen and (min-width: 667px) {
+	footer address a {
+		pointer-events: none;
+		text-decoration: none;
+	}
+}
+
 .l-eye-catch {
   margin: 0 auto 30px;
   width: 860px;
