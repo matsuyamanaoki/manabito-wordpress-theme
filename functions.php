@@ -27,3 +27,14 @@ function theme_scripts() {
 	wp_enqueue_script( 'theme_slider', get_template_directory_uri() . '/js/slider.js', array( 'bxslider' ), null, true );
 }
 add_action( 'wp_enqueue_scripts', 'theme_scripts' );
+
+function theme_widgets_init() {
+	register_sidebar( array(
+		'name'          => 'Sidebar',
+		'id'            => 'sidebar-1',
+		'description'   => '右のサイドナビのエリア',
+		'before_widget' => '',
+		'after_widget'  => ''
+	) );
+}
+add_action( 'widgets_init', 'theme_widgets_init');
