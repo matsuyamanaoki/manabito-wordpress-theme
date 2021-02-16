@@ -128,7 +128,7 @@ header {
   margin: 0 0 0 6px;
 }
 
-.l-contens-wrapper {
+.l-contents-wrapper {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
@@ -446,7 +446,7 @@ footer address a {
     width: 100%;
   }
 
-  .l-contens-wrapper {
+  .l-contents-wrapper {
     flex-wrap: wrap;
     width: 100%;
   }
