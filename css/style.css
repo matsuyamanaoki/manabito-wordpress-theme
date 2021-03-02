@@ -380,12 +380,55 @@ footer address a {
   display: flex;
 }
 
-.contact-kind li {
-  cursor: pointer;
+.contact-kind .wpcf7-list-item:not(:last-child) {
+  margin: 0 20px 0 0;
 }
 
-.contact-kind li:not(:last-child) {
-  margin: 0 20px 0 0;
+.contact-kind .wpcf7-list-item input {
+	display: none;
+}
+
+.contact-kind .wpcf7-list-item-label {
+	padding: 0 0 0 30px;
+	position: relative;
+}
+
+.contact-kind .wpcf7-list-item-label,
+.contact-kind .wpcf7-list-item-label::before,
+.contact-kind .wpcf7-list-item-label::after{
+	cursor: pointer;
+}
+
+.contact-kind .wpcf7-list-item-label::before,
+.contact-kind .wpcf7-list-item-label::after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 50%;
+}
+
+.contact-kind .wpcf7-list-item-label::before {
+	background: #9d886d;
+	border-radius: 50%;
+	height: 12px;
+	left: 4px;
+	opacity: 0;
+	transform: translateY(-50%);
+	width: 12px;
+
+}
+
+.contact-kind .wpcf7-list-item-label::after {
+	border: solid 1px #e1d9cc;
+	border-radius: 50%;
+	height: 20px;
+	left: 0;
+	transform: translateY(-50%);
+	width: 20px;
+}
+
+.contact-kind .wpcf7-list-item input:checked + .wpcf7-list-item-label::before {
+	opacity: 1;
 }
 
 .contact-table textarea {
